@@ -21,7 +21,6 @@ package main
 
 import (
 	"context"
-	//"golang.org/x/text/date"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	pb "linkCutterTask/helloworld"
@@ -48,69 +47,6 @@ var (
 	dbMap        = make(map[string]string)
 	compareSlice []string
 )
-
-//func RandomizeString(link string)  (string, bool){
-//link = strings.ToLower(link)
-//log.Println("len url short begin:", utf8.RuneCountInString(link))
-//tmpLink := ""
-//shortLink := ""
-//alphabet := []rune("a1b2c3d4f5z6x7c8v9b0")
-//secret := []rune("poiuytrewqasdfghjklmnbvcxzaqwsedrftgyhujikolp")
-//status := true
-//r := []rune(link)
-//lenLink := utf8.RuneCountInString(link)
-//if utf8.RuneCountInString(link) < 9 {
-//	for lenLink != 9 {
-//		tmpLink += string(alphabet[utf8.RuneCountInString(link)])
-//		lenLink = lenLink + 1
-//	}
-//}
-//if  utf8.RuneCountInString(link) > 9 || utf8.RuneCountInString(link) == 9 {
-//	tmpLink = link[0:8]
-//}
-//for i, r := range tmpLink{
-//	if (r < 'a' || r > 'z') || (r < '0' || r > '9') {
-//		if r%2 == 0 && i%2 == 0 {
-//			shortLink += string(unicode.ToUpper(secret[i]))
-//		}else {
-//			shortLink += string(alphabet[i])
-//		}
-//	}else {
-//		shortLink += string(secret[i])
-//	}
-//}
-//log.Println("len url short end:", utf8.RuneCountInString(shortLink))
-//lenShortLink := utf8.RuneCountInString(shortLink)
-//if  lenShortLink != 8{
-//	log.Println("Меньше 9")
-//	shortLink += string(secret[lenShortLink:8])
-//	if _, ok := dbMap[shortLink]; ok {
-//		log.Println("Ссылка уже существует!")
-//	}
-//} else if link[0:1] == "h" {
-//	result :=  link[8:9] + shortLink + "_"
-//	if _, ok := dbMap[result]; ok {
-//		log.Println("Ссылка уже существует!")
-//		status = false
-//	}
-//	return  result,status
-//}else if unicode.IsLetter(r[0]){
-//	log.Println("не буква")
-//	result :=  "A" + shortLink + "_"
-//	if _, ok := dbMap[result]; ok {
-//		log.Println("Ссылка уже существует!")
-//		status = false
-//	}
-//	return  result,status
-//}
-////если начинается с !"№;%::?*()_+
-//result := link[0:1] + shortLink + "_"
-//if _, ok := dbMap[result]; ok {
-//	log.Println("Ссылка уже существует!")
-//	status = false
-//}
-//	return  result, status
-//}
 
 func RandomizeString(link string) string {
 	alphabet := "a1b2c3d4f5z6x7c8v9b0mnbhj"
