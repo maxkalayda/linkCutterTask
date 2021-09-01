@@ -1,0 +1,2 @@
+grpcurl --plaintext -d '{"name":"https://google.com"}' localhost:50051 helloworld.Greeter.Get
+grpcurl --plaintext -d '{"name":"https://google.com"}' localhost:50051 helloworld.Greeter.Create
